@@ -6,6 +6,6 @@ export function* onLogin(action) {
   } catch (error) {}
 }
 
-export function* Login() {
+export default function* Login() {
   yield takeLatest("ON_LOGIN", onLogin);
 }
