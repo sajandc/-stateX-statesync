@@ -8,7 +8,7 @@ import { callApi } from "../constant/callApi";
 import { URL } from "../constant/urls";
 
 function* fetchUsersSaga() {
-  console.log("came in Saga", fetchApi)
+  console.log("came in Saga", callApi)
   try {
     console.log("above api call")
     const users = yield call(callApi, URL.USERS_LIST, 'get');
