@@ -4,15 +4,14 @@ import {
   fetchUsersSuccess,
   fetchUsersFailure,
 } from "../action/home.action";
-import { fetchApi } from "../constant/callApi";
+import { callApi } from "../constant/callApi";
 import { URL } from "../constant/urls";
 
 function* fetchUsersSaga() {
   console.log("came in Saga", fetchApi)
   try {
-    debugger
-    console.log("above api call", users)
-    const users = yield call(fetchApi, URL.USERS_LIST);
+    console.log("above api call")
+    const users = yield call(callApi, URL.USERS_LIST, 'get');
     console.log("Users", users)
     yield put(fetchUsersSuccess(users));
   } catch (error) {
