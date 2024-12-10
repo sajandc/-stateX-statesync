@@ -11,6 +11,7 @@ function* fetchUsersSaga() {
   console.log("came in Saga")
   try {
     const users = yield call(fetchApi, URL.USERS_LIST);
+    console.log("Users", users)
     yield put(fetchUsersSuccess(users));
   } catch (error) {
     console.log("error", error)
