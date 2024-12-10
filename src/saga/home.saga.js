@@ -13,6 +13,7 @@ function* fetchUsersSaga() {
     const users = yield call(fetchApi, URL.USERS_LIST);
     yield put(fetchUsersSuccess(users));
   } catch (error) {
+    console.log("error", error)
     yield put(fetchUsersFailure(error.message));
   }
 }
