@@ -124,7 +124,7 @@ const handleSuccess = (response) => {
   return data;
 };
 const handleError = (error) => {
-  const { status, statusText, data, error } = error;
+  const { status, statusText, data } = error;
   console.log("error in axois", error)
   const errRes = {
     status,
