@@ -1,6 +1,6 @@
 {
   "name": "globalstatex-statesync",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A shared state management solution for React and React Native",
   "main": "src/index.js",
   "scripts": {
