@@ -11,7 +11,6 @@ import {
   };
   
   const homeReducer = (state = initialState, action) => {
-    console.log("reducer", action)
     switch (action.type) {
       case FETCH_USERS_REQUEST:
         return {

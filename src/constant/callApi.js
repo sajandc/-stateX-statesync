@@ -120,12 +120,10 @@ const callAxois = (options, url, resolve, reject, cache, query) => {
 
 const handleSuccess = (response) => {
   const { data } = response;
-  console.log("data in axois", data)
   return data;
 };
 const handleError = (error) => {
   const { status, statusText, data } = error;
-  console.log("error in axois", error)
   const errRes = {
     status,
     statusText,
